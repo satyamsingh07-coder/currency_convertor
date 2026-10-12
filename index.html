@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="converter">
+    <h1>Currency Converter</h1>
+
+    <div class="field">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" value="100" min="0" step="any" inputmode="decimal">
+    </div>
+
+    <div class="pair">
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from"></select>
+      </div>
+
+      <button id="swap" type="button" aria-label="Swap currencies">⇄</button>
+
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to"></select>
+      </div>
+    </div>
+
+    <div class="result" aria-live="polite">
+      <p id="result-main">Loading rates…</p>
+      <p id="result-rate"></p>
+    </div>
+
+    <p id="status" class="status"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
